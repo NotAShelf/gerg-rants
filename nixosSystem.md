@@ -64,7 +64,9 @@ lib.nixosSystem {
 
 ## Implicit flake registry and NIX_PATH configuration
 Ever since [this commit](https://github.com/NixOS/nixpkgs/commit/e456032addae76701eb17e6c03fc515fd78ad74f)
+
 lib.nixosSystem sets nix.path and nix.registry
+
 This isn't well documented (like anything nix) but shouldn't really cause issues...
 
 ## Ideal case 
