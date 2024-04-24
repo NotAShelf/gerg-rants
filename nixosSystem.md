@@ -141,7 +141,10 @@ this:
   } @ inputs: let
     inherit (nixpkgs) lib;
   in {
-    nixosConfigurations.bald-frog = lib.evalModules {
+    # a system presumed to be x86_64-linux. You may
+    # set nixpkgs.hostPlatform differently if that
+    # is not the case.
+    nixosConfigurations.bald-frog = lib.modules.evalModules {
       modules = builtins.concatLists [
         (import "${nixpkgs}/nixos/modules/module-list.nix")
 
